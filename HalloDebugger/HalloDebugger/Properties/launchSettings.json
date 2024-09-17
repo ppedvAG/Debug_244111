@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "HalloDebugger": {
+      "commandName": "Project",
+      "remoteDebugEnabled": true
+    }
+  }
+}
