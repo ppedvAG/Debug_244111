@@ -19,5 +19,24 @@ namespace HalloEfCore.Logic
 
             throw new NotImplementedException();
         }
+
+
+        public void Linq()
+        {
+
+            var text = new List<String>();
+
+            var result = text.Where(x => x.StartsWith("b"));
+
+            var result2 = text.Where(Filter);
+        }
+
+        private bool Filter(string arg)
+        {
+            if (arg.StartsWith("b"))
+                return true;
+            else
+                return false;
+        }
     }
 }
