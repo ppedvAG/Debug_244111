@@ -1,5 +1,6 @@
 ﻿using HalloEfCore.Model;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 
 namespace HalloEfCore.Data
 {
@@ -14,7 +15,7 @@ namespace HalloEfCore.Data
         {
             string conString = "Server=(localdb)\\mssqllocaldb;Database=PizzaDb;Trusted_Connection=true;";
 
-            optionsBuilder.UseSqlServer(conString);
+            optionsBuilder.UseSqlServer(conString).LogTo(msg => Debug.WriteLine(msg)).EnableSensitiveDataLogging(true);
         }
     }
 }
